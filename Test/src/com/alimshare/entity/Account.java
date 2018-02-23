@@ -31,11 +31,5 @@ public class Account {
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
 	}
-	public AccountTypeEnum getAccountType() {
-		return accountType;
-	}
-	public void setAccountType(AccountTypeEnum accountType) {
-		this.accountType = accountType;
-	}
 	
 }
