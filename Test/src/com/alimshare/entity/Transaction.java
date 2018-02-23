@@ -3,15 +3,15 @@ package com.alimshare.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import com.alimshare.util.DestinationTypeEnum;
+import com.alimshare.util.AccountTypeEnum;
 import com.alimshare.util.TransactionStatusEnum;
 import com.alimshare.util.TransactionTypeEnum;
 
 public class Transaction {
 	
 	private Long 		id;
-	private String 		accountFrom;
-	private String 		accountTo;
+	private Account		sourceAccount;
+	private Account		destinationAccount;
 	private BigDecimal 	amount;
 	private Date 		date;
 	private String 		reference;
@@ -20,25 +20,14 @@ public class Transaction {
 	private TransactionTypeEnum type;
 	private TransactionStatusEnum status;
 	
-	private DestinationTypeEnum destinationType;
+	private AccountTypeEnum accountFromType;
+	private AccountTypeEnum accountToType;
 	
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
-	}
-	public String getAccountFrom() {
-		return accountFrom;
-	}
-	public void setAccountFrom(String accountFrom) {
-		this.accountFrom = accountFrom;
-	}
-	public String getAccountTo() {
-		return accountTo;
-	}
-	public void setAccountTo(String accountTo) {
-		this.accountTo = accountTo;
 	}
 	public BigDecimal getAmount() {
 		return amount;
@@ -76,11 +65,40 @@ public class Transaction {
 	public void setStatus(TransactionStatusEnum status) {
 		this.status = status;
 	}
-	public DestinationTypeEnum getDestinationType() {
-		return destinationType;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public void setDestinationType(DestinationTypeEnum destinationType) {
-		this.destinationType = destinationType;
-	}	
+	public AccountTypeEnum getAccountFromType() {
+		return accountFromType;
+	}
+	public void setAccountFromType(AccountTypeEnum accountFromType) {
+		this.accountFromType = accountFromType;
+	}
+	public AccountTypeEnum getAccountToType() {
+		return accountToType;
+	}
+	public void setAccountToType(AccountTypeEnum accountToType) {
+		this.accountToType = accountToType;
+	}
+	public Account getSourceAccount() {
+		return sourceAccount;
+	}
+	public void setSourceAccount(Account sourceAccount) {
+		this.sourceAccount = sourceAccount;
+	}
+	public Account getDestinationAccount() {
+		return destinationAccount;
+	}
+	public void setDestinationAccount(Account destinationAccount) {
+		this.destinationAccount = destinationAccount;
+	}
+	
+	@Override
+	public String toString() {
+		return "Transaction [id=" + id + ", sourceAccount=" + sourceAccount + ", destinationAccount="
+				+ destinationAccount + ", amount=" + amount + ", date=" + date + ", reference=" + reference
+				+ ", description=" + description + ", type=" + type + ", status=" + status + ", accountFromType="
+				+ accountFromType + ", accountToType=" + accountToType + "]";
+	}
 	
 }

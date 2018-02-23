@@ -1,5 +1,7 @@
 package com.alimshare.dao;
 
-public class GiroDao extends AccountDao {
+import com.alimshare.entity.GiroAccount;
+
+public interface GiroDao extends AccountDao<GiroAccount> {
 
 }

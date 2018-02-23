@@ -1,5 +1,7 @@
 package com.alimshare.dao;
 
-public class LoanDao extends AccountDao {
+import com.alimshare.entity.LoanAccount;
+
+public interface LoanDao extends AccountDao<LoanAccount> {
 
 }

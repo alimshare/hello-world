@@ -2,6 +2,11 @@ package com.alimshare.entity;
 
 import java.math.BigDecimal;
 
+import com.alimshare.util.AccountTypeEnum;
+
+/*
+ * implementasinya di extends / interface ?
+ */
 public class Account {
 
 	private Long id;
@@ -25,6 +30,12 @@ public class Account {
 	}
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
+	}
+	public AccountTypeEnum getAccountType() {
+		return accountType;
+	}
+	public void setAccountType(AccountTypeEnum accountType) {
+		this.accountType = accountType;
 	}
 	
 }
